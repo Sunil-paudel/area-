@@ -1,0 +1,36 @@
+
+
+"""
+file:lightyear.py
+Lab1.2quesetion 2
+author:Sunil chandra paudel
+student id:s4664741
+Date:1 sep 2021
+program discription:Light travels at 3 * 10sup8 meters per second.
+A light-year is the distance a light beam travels in one year.
+Write a program that calculates and displays the value of a light year.
+Peer review student id and name-s4663902
+ashsish sapkota
+
+"""
+"""
+we know 1 light year is the distance travelled by light in 1 year interval of time
+so we have simple formula of speed as speed=distance travelled/time
+which can be modified as distance travelled=speed *time and we have speed as speed of light as constant
+and time as how many light year is inputed for finding the distance
+but to make its unit same we need to change time into second and distance into term of meter.
+lets convert 1 year into second
+1 year=365 days= 365*24 hours=365*24*60 minutes=365*24*60*60 seconds=31536000 seconds
+"""
+#constants
+speed_of_light=3*10**8
+#input
+y=float(input("enter the number of light year:"))
+
+#process
+time=y*31536000
+distance=(speed_of_light*time)/1000
+exp_number = "{:e}".format(distance)
+
+#output
+print("one light year is equal to:",exp_number, "km")
