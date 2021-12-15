@@ -1,0 +1,42 @@
+"""
+file:totalcost.py
+author:Sunil chandra paudel, parichhit Basnet
+student id:s4664741 and s4662952 respectively.
+Date:22 Sep 2021
+program discription :  A book store sells new books for $20.00 and oldies for $10.00. Customer can
+also rent any book for $2.00 a day. A discount of 5% is given to customer
+whose total cost is $50 or more. A tax rate of 10% is then applied after the
+discount if any.
+Write a program that the clerks at the book store can use to calculate the total
+charge for a customer’s book shopping and rentals. The program should
+prompt for the customer’s name, the number of each type of book to buy and
+to rent and output the total cost (after discount and after tax). The program
+should do the same calculations for different customers until no customer
+name is entered."""
+#constants
+new_book = 20
+old_book = 10
+rent = 2
+discount = 0.05 # discount = 5/100 as we have data in percentage
+tax = 0.10 # discount = 10/100 as we have data on percentage
+while True: # whenever the condition are True program will run forever in loop
+    name = input("enter the name of customer: ")
+    if name == "":
+        break
+    else:
+        x = int(input("number of new book bought by customer: "))
+        y = int(input("number of old book bought by customer: "))
+        rented_new_book = int(input("enter the number of rented new book: "))
+        rented_old_book = int(input("enter the number of rented old book: "))
+        rented_book = rented_old_book + rented_new_book
+        rent = 2 * rented_book
+        total_cost = new_book * x + old_book * y + rent
+        if total_cost >= 50:
+            total_cost = total_cost - 0.05 * total_cost
+            z = str(total_cost)
+            print("the total cost for " + name + " who have bought", x, " new book and ", y, "old book \n"
+             "along with ", rented_new_book, " rented new book and ", rented_old_book, "rented old book is:$" + z)
+        else:
+            y = str(total_cost)
+            print("the total cost for " + name + " who have bought", x, " new book and ", y, "old book \n"  
+             "along with ", rented_new_book, " rented new book and ", rented_old_book, "rented old book is:$" + z)
