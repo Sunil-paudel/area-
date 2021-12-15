@@ -1,0 +1,36 @@
+
+"""
+file:population.py
+Lab1.3 quesetion 2a
+author:Sunil chandra paudel
+student id:s4664741
+Date:03 Sep 2021
+program discription: a)	A local biologist needs a program to predict population growth. The inputs would be the initial number of organisms,
+the rate of growth (a real number greater than 0), the number of hours it takes to achieve this rate, and a number of hours during which the population grows.
+For example, one might start with a population of 500 organisms, a growth rate of 2, and a growth period to achieve this rate of 6 hours.
+Assuming that none of the organisms die, this would imply that this population would double in size every 6 hours. Thus, after allowing 6 hours for growth,
+we would have 1000 organisms, and after 12 hours, we would have 2000 organisms.  Write a program that takes these inputs and displays a prediction of the total
+population.
+
+Peer review student id and name-Sachin shrestha
+s4663963
+"""
+#input
+pop = int(input("Enter the initial number of organisms:"))
+rate = float(input("Enter the rate of growth [a real number]: "))
+hrate = int(input("Enter the number of hours to achieve the rate of growth: "))
+hours = int(input("Enter the total hours of growth: "))
+#process
+for eachpass in range(hrate, hours+1, hrate):
+    pop *= rate
+while hrate>hours or rate<0:
+    #output
+    print('\'error\' total hour of growth should be  hour used to detrermine the growth rate or\n growth rate should be positive.')
+    break
+else:
+    print("the population of organism is ", pop )
+    print("note: if the total hour of growth is not multiple of rate of growth it \n can give error data as microorganism grows expotentially")
+
+
+
+
