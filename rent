@@ -1,0 +1,27 @@
+
+
+"""
+file:rent.py
+Lab1.2quesetion 2
+author:Sunil chandra paudel
+student id:s4664741
+Date:1 Sep 2021
+program discription: Five Star Video rents new videos for $3.00 a night
+and oldies for $2.00 a night. Write a program that the clerks at Five Star
+Video can use to calculate the total charge for a customer’s video rentals.
+The program should prompt the user for the number of
+each type of video and output the total cost.
+Peer review student id and name-s4663902
+ashsish sapkota
+
+"""
+#constants
+new_videos=3
+old_videos=2
+#input
+x=int(input("number of new vidoes taken by customer:"))
+y=int(input("number of old vidoes taken by customer:"))
+#process
+rent= new_videos*x + old_videos*y
+#output
+print("the total rent of customer is:" "$",rent )
