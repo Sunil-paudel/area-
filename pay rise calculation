@@ -1,0 +1,32 @@
+
+"""
+file:pay_raise.py
+Lab1.3 quesetion 2b
+author:Sunil chandra paudel
+student id:s4664741
+Date:03 sep 2021
+program discription: b)	Teachers in most school districts are paid on a schedule that provides a salary based on their number of years of teaching experience.
+For example, a beginning teacher in the Lexington School District might be paid $30,000 the first year. For each year of experience after this first year,
+up to 10 years, the teacher receives a 2% increase over the preceding value. 
+Write a program that displays a salary schedule, in tabular format, for teachers in a school district. The inputs are the starting salary,
+the percentage increase, and the number of years in the schedule. Each row in the schedule should contain the year number and the salary for that year
+
+Peer review student id and name-Sachin shrestha
+s4663963
+"""
+#input
+starting_salary = float(input("Enter the starting salary amount: "))
+salary_raise = int(input("Enter the salary raise percentage: "))
+years = int(input("enter the number of year vin the schedule: "))
+
+raise_amount = salary_raise / 100 # changing raised amount into decimal
+total_raise = 0# variable
+print("%4s%14s%10s%16s" % ("year", "starting salary", "pay raise", "final salary"))#header formating
+for year in range(1, years+1):#initiating for loop
+    payraise = starting_salary * raise_amount
+    final_salary = starting_salary + payraise
+    starting_salary = final_salary
+    total_raise += payraise
+    print("%4d%12.2f%10.2f%16.2f" % (year, starting_salary, payraise, final_salary))#tabular formatting of data while calling above derieved data
+print("the final salary after", years, " years  is", final_salary)
+print("the total amount of raise after", years, " years is ", total_raise)
