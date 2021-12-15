@@ -1,0 +1,4 @@
+articles = ("A", "THE")
+nouns = ("BOY", "GIRL", "BAT", "BALL")
+verbs = ("HIT", "SAW", "LIKED")
+prepositions = ("WITH", "BY")
