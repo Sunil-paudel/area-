@@ -1,0 +1,20 @@
+
+"""
+file:circle.py
+Lab1.1 quesetion 2d
+author:Sunil chandra paudel
+student id:s4664741
+Date:31 aug 2021
+program discription: inputting the raadiusand finding the area of circle
+using formula 3.14*radius**2.
+Peer review student id and name-Shital singh rayamajhi
+s4663245
+"""
+#constant
+pi=3.14
+#input
+radius= float (input ('enter the radius:'))
+#process
+area= pi*radius**2
+#output
+print ('the area of circle is', area)
