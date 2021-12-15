@@ -1,0 +1,22 @@
+
+
+"""
+file:2input.py
+Lab1.1 quesetion 2e
+author:Sunil chandra paudel
+student id:s4664741
+Date:31 aug 2021
+program discription: Write and test a program that accepts the user’s name
+(as text) and age (as a number) as input. The program should output a sentence
+containing the user’s name and age. 
+
+
+
+Peer review student id and name-Shital singh rayamajhi
+s4663245
+"""
+#input
+name = input('Please enter your name: ')
+age = int(input('Please enter your age: '))
+#output
+print("Hi " + name + ", hope you remember me i am your friend from school, when you were",age, "years old." " "+ name +" i am sunil")
