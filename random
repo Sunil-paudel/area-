@@ -1,0 +1,28 @@
+#pyproject
+pwd = input("what is your master password: ")
+
+
+def view():
+    with open("password.txt", "r") as f:  # file = open("password.txt, "r")
+        for lines in f.readlines():
+            print(lines)
+
+
+def add():
+    name = input("enter your username:")
+    pwd = input("enter your password: ")
+    with open("password.txt", "a") as f: # file = open("password.txt, "a")
+        f.write(name + "|" + pwd)
+
+
+while True:
+    mode = input("would you like to add a new password or view existing password(view, add)? ")
+    if mode == "q":
+        quit()
+    if mode == "view":
+        view()
+    elif mode == "add":
+        add()
+    else:
+        print("invalid input")
+        continue
